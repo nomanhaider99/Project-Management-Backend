@@ -9,7 +9,7 @@ async function bootstrap() {
 
   app.use(cookieParser());
   app.enableCors({
-    origin: ['http://localhost:4200', 'https://web-production-b92c.up.railway.app'],
+    origin: ['http://localhost:4200', 'https://project-management-frontend-eosin.vercel.app'],
     credentials: true
   });
 
