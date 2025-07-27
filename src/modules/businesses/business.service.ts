@@ -277,8 +277,8 @@ export class BusinessService {
                 res.cookie('token', token, {
                     httpOnly: true,
                     secure: true,
-                    sameSite: 'lax',
-                    maxAge: 1000 * 60 * 60 * 24
+                    sameSite: 'none',
+                    path: '/'
                 });
 
                 return {
