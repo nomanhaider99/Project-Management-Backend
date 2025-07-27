@@ -315,7 +315,12 @@ export class UserService {
                 }
             );
         } else {
-            response.clearCookie('token');
+            response.clearCookie('token', {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'none',
+                path: '/'
+            });
 
             return {
                 message: 'User Logged Out!'

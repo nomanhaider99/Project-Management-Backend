@@ -297,10 +297,15 @@ export class BusinessService {
                 }
             );
         } else {
-            response.clearCookie('token');
+            response.clearCookie('token', {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'none',
+                path: '/'
+            });
             return {
                 message: 'Business LoggedOut Successfully!'
             }
         }
-    } 
+    }
 }
